@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <title>Прачечная с доставкой по г. Алматы</title>
+  <meta name="description" content="Прачечная с доставкой по г. Алматы">
+  <meta name="keywords" content="Прачечная с доставкой по г. Алматы">
+
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:image" content="path/to/image.jpg">
+  <link rel="shortcut icon" href="img/favicon.ico?v=1" type="image/x-icon">
+  <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="./css/libs.min.css">
+  <link rel="stylesheet" href="./css/main.min.css">
+</head>
+
+<body id="main-page">
+
+  <div class="page-wrapper">
+
+    <div class="page-top"><i class="fa fa-angle-double-up"></i></div>
+
+    <div class="callback__wrapper">
+      <div class="callback__items">
+        <div class="callback__item">
+          <a target="_parent" href="https://api.whatsapp.com/send?phone=77077014200" id="whatsapp">
+            <i class="callback__icon callback__whatsapp"></i> WhatsApp
+          </a>
+        </div>
+        <div class="callback__item">
+          <a href="tel:+77077014200" id="callMe" class="call-me">
+            <i class="callback__icon callback__phone"></i>  Позвонить
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="container">
+        <div class="header__content">
+          <a href="/" class="logo">
+            <img src="./img/logo.png" alt="">
+            <h3 class="header__title d-none d-md-block">
+              Прачечная с доставкой по г. Алматы
+            </h3>
+          </a>
+
+          <div class="grow"></div>
+
+          <nav class="main-menu">
+            <div class="container">
+              <ul>
+                <li class="link">
+                  <a href="#calculate">Рассчитать стоимость</a>
+                </li>
+                <li class="link">
+                  <a href="#service">Услуги</a>
+                </li>
+                <li class="link">
+                  <a href="#advantage">Преимущества</a>
+                </li>
+                <li class="link last">
+                  <a href="#contact">Контакты</a>
+                </li>
+                <li class="d-lg-none">
+                  <a href="tel:+77077014200" class="text-phone" id="phone_number">+7 707 701-42-00</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+          <div class="header__phone d-none d-lg-block">
+            <a href="tel:+77077014200" class="text-phone" id="phone_number">+7 707 701-42-00</a>
+          </div>
+
+          <a href="#" class="button d-none d-sm-block" data-remodal-target="zvonok-modal">Заказать звонок</a>
+
+          <button class="hamburger hamburger--elastic hamburger--accessible">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section class="section s-main" id="main">
+      <div class="container">
+        <div class="row d-flex">
+          <div class="col-lg-8">
+            <div class="main">
+              <div class="main__text">Превращаем уныло-грязное в сверкающе-чистое! 
+                Качественно, дёшево, быстро (и без волшебной палочки)</div>
+              <div class="main__title">Правильная стирка постельного белья,
+                текстиля и спецодежды от 240 тг/кг</div>
+              <div class="main__zakaz">*Минимальный объем заказа - 10 кг.</div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="row wow FadeIn">
+              <div class="col-6">
+                <div class="main__block main__block--1">Бесплатная <br>
+                    доставка <br>
+                    в обе стороны</div>
+              </div>
+              <div class="col-6">
+                <div class="main__block">Выполненяем <br>
+                    каждый заказ <br>
+                    в течение 1 суток</div>
+              </div>
+            </div>
+            <div class="form form--vertical inverse wow FadeIn">
+              <form action="/mail.php" method="post">
+                <div class="form__title">Акция! Закажите стирку
+                    свыше 1000 кг. по цене <br>
+                    в 150 тенге за 1 кг!</div>
+                <div class="form__content">
+                  <input type="hidden" name="info" value="Акция! Закажите стирку свыше 1000 кг. по цене в 150 тенге за 1 кг!">
+    
+                  <div class="input-div">
+                    <input type="text" class="input" name="name" placeholder="Ваше имя">
+                  </div>
+    
+                  <div class="input-div">
+                    <input type="tel" class="input" name="phone" placeholder="Введите телефон*" required minlength="10">
+                    <span class="error-message">Заполните это поле</span>
+                  </div>
+    
+                  <button class="button button--red ajax-submit" type="submit" id="ostavit_zayavku">Оставить заявку</button>
+    
+                  <div class="form__info">*Ваши данные в безопасности <br>
+                      и не будут переданы третьим лицам</div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section s-calculate" id="calculate" >
+      <div class="container">
+        <h2 class="section-title">Рассчитайте стоимость стирки вашего белья</h2>
+        <div class="s-calculate__title">Выберите изделие, укажите его количество и размер</div>
+        <div class="s-calculate__text">(Можно указать 1 и более вариантов)</div>
+          <form action="/mail.php" method="post">
+            <input type="hidden" name="info" value="Quiz">
+            <div class="row">
+              <div class="col-lg-4 col-md-6">
+                <div class="question calculate wow slideInUp">
+                  <h3 class="calculate__title">Постельные принадлежности</h3>
+                  <input type="hidden" name="Вопрос1" value="Постельные принадлежности">
+                  <div class="question__variants calculate__quiz">
+                    <label class="label">
+                      <div class="checkbox checkbox--image">
+                        <input type="checkbox" name="Ответ1" value="Комплект постельного белья 1,5 сп.">
+                        <span></span>                        
+                      </div>
+                      <span>Комплект постельного белья 1,5 сп.</span>
+                    </label>
+                    <div class="question__number">
+                      <div class="number__title">Количество</div>
+                      <input type="number" class="number" name="Ответ1" value="1">
+                    </div>
+                    
+                    <label class="label">
+                      <div class="checkbox checkbox--image">
+                        <input type="checkbox" name="Ответ1" value="Комплект постельного белья  2 сп.">
+                        <span></span>
+                      </div>
+                      <span>Комплект постельного белья  2 сп.</span>
+                    </label>
+    
+                    <label class="label">
+                      <div class="checkbox checkbox--image">
+                        <input type="checkbox" name="Ответ1" value="Подушка">
+                        <span></span>
+                      </div>
+                      <span>Подушка</span>
+                    </label>
+    
+                    <label class="label">
+                      <div class="checkbox checkbox--image">
+                        <input type="checkbox" name="Ответ1" value="Одеяло 1,5 сп.">
+                        <span></span>
+                      </div>
+                      <span>Одеяло 1,5 сп.</span>
+                    </label>
+    
+                    <label class="label">
+                      <div class="checkbox checkbox--image">
+                        <input type="checkbox" name="Ответ1" value="Одеяло 2 сп.">
+                        <span></span>
+                      </div>
+                      <span>Одеяло 2 сп.</span>
+                    </label>
+    
+                    <label class="label">
+                      <div class="checkbox checkbox--image">
+                        <input type="checkbox" name="Ответ1" value="Покрывало, плед">
+                        <span></span>
+                      </div>
+                      <span>Покрывало, плед</span>
+                    </label>
+                    
+                    <label class="label">
+                      <span class="checkbox checkbox--image">
+                        <input type="radio" name="Ответ1" value="Другое" class="drugoe">
+                        <span></span>
+                      </span>
+                      <span>Другое</span>
+                      <input type="text" name="Ответ1_текст" placeholder="введите текст*" class="ukazat">
+                    </label>
+                  </div>
+                  <div class="question__error"></div>
+                </div>
+              </div>            
+              <div class="col-lg-4 col-md-6">
+                <div class="question calculate wow slideInUp">
+                  <h3 class="calculate__title">Шторы, тюль</h3>
+                  <input type="hidden" name="Вопрос2" value="Шторы, тюль">
+                  <div class="question__variants calculate__quiz">
+                    <label class="label">
+                      <div class="checkbox checkbox--image">
+                        <input type="checkbox" name="Ответ2" value="Тюль">
+                        <span></span>
+                      </div>
+                      <span>Тюль</span>
+                    </label>
+                    
+                    <label class="label">
+                      <div class="checkbox checkbox--image">
+                        <input type="checkbox" name="Ответ2" value="Шторы простые, тонкие">
+                        <span></span>
+                      </div>
+                      <span>Шторы простые, тонкие</span>
+                    </label>
+    
+                    <label class="label">
+                      <div class="checkbox checkbox--image">
+                        <input type="checkbox" name="Ответ2" value="Шторы сложные, на подкладе">
+                        <span></span>
+                      </div>
+                      <span>Шторы сложные, на подкладе</span>
+                    </label>    
+                    
+                    <label class="label">
+                      <span class="checkbox checkbox--image">
+                        <input type="radio" name="Ответ2" value="Другое" class="drugoe">
+                        <span></span>
+                      </span>
+                      <span>Другое</span>
+                      <input type="text" name="Ответ1_текст" placeholder="введите текст*" class="ukazat">
+                    </label>
+                  </div>
+                  <div class="question__error"></div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <div class="question calculate wow slideInUp">
+                  <h3 class="calculate__title">Спец  одежда</h3>
+                  <input type="hidden" name="Вопрос3" value="Спец  одежда">
+                  <div class="question__variants calculate__quiz">
+                    <label class="label">
+                      <div class="checkbox checkbox--image">
+                        <input type="checkbox" name="Ответ3" value="Рабочая спецовка">
+                        <span></span>
+                      </div>
+                      <span>Рабочая спецовка</span>
+                    </label>
+                    
+                    <label class="label">
+                      <div class="checkbox checkbox--image">
+                        <input type="checkbox" name="Ответ3" value="Рабочая спецовка зимняя">
+                        <span></span>
+                      </div>
+                      <span>Рабочая спецовка зимняя</span>
+                    </label>
+    
+                    <label class="label">
+                      <div class="checkbox checkbox--image">
+                        <input type="checkbox" name="Ответ3" value="Форма обслуживающего персонала">
+                        <span></span>
+                      </div>
+                      <span>Форма обслуживающего персонала</span>
+                    </label>    
+                    
+                    <label class="label">
+                      <span class="checkbox checkbox--image">
+                        <input type="radio" name="Ответ3" value="Другое" class="drugoe">
+                        <span></span>
+                      </span>
+                      <span>Другое</span>
+                      <input type="text" name="Ответ1_текст" placeholder="введите текст*" class="ukazat">
+                    </label>
+                  </div>
+                  <div class="question__error"></div>
+                </div>
+              </div>
+            </div>  
+            
+            <button class="button more">Далее</button>
+
+            <div class="form form--vertical d-none">
+              <div class="form__title">Введите контактные данные для обратной связи</div>
+              <div class="form__content">
+                <div class="input-div">
+                  <input type="text" class="input input--black" name="name" placeholder="Представьтесь">
+                </div>
+                <div class="input-div">
+                  <input type="tel" class="input input--black" name="phone" placeholder="Введите телефон*" required>
+                  <span class="error-message">Заполните поле</span>
+                </div>
+                <button type="submit" class="button ajax-submit">Рассчитать стоимость</button>
+                <div class="form__info">
+                  *Ваши данные в безопасности <br>
+                  и не будут переданы третьим лицам
+                </div>
+              </div>          
+            </div>
+            
+          </form> 
+
+        <img class="vector" src="./img/vector-1.png" alt="">
+      </div>
+    </section>
+
+    <section class="section s-service" id="service">
+      <div class="container">
+        <h2 class="section-title">Стираем, сушим, гладим, чистим</h2>
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="service inverse">
+              <div class="service__img"><img src="./img/service-1.jpg" alt=""></div>
+              <div class="service__block">
+                <div class="service__title">Постельные <br>
+                    принадлежности</div>
+                <button class="button button--red">Оставить заявку</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="service inverse">
+              <div class="service__img"><img src="./img/service-2.jpg" alt=""></div>
+              <div class="service__block">
+                <div class="service__title">Шторы, тюли</div>
+                <button class="button button--red">Оставить заявку</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="service inverse">
+              <div class="service__img"><img src="./img/service-3.jpg" alt=""></div>
+              <div class="service__block">
+                <div class="service__title">Шторы, тюли</div>
+                <button class="button button--red">Оставить заявку</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="service inverse">
+              <div class="service__img"><img src="./img/service-4.jpg" alt=""></div>
+              <div class="service__block">
+                <div class="service__title">Покрывалы, пледы, <br>
+                    корпешки</div>
+                <button class="button button--red">Оставить заявку</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="service inverse">
+              <div class="service__img"><img src="./img/service-5.jpg" alt=""></div>
+              <div class="service__block">
+                <div class="service__title">Ковровые <br>
+                    покрытии</div>
+                <button class="button button--red">Оставить заявку</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="service inverse">
+              <div class="service__img"><img src="./img/service-6.jpg" alt=""></div>
+              <div class="service__block">
+                <div class="service__title">Все, что не влезает <br>
+                    в обычную стиральную машину</div>
+                <button class="button button--red">Оставить заявку</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="s-service__title">Корпоративным клиентам – спеццены и спецпредложения!</div>
+        <div class="s-service__text"> Существенная экономия для владельцев гостиниц, ресторанов, организаций</div>
+
+        <div class="form form--horizontal inverse">
+          <form action="/mail.php" method="post">
+            <div class="form__title">Оставьте заявку,чтобы обсудить индивидуальные <br>
+                условия предоставления услуг прачечной для Вашего бизнеса</div>
+            <div class="form__content">
+
+              <input type="hidden" name="info" value="Оставьте заявку,чтобы обсудить индивидуальные
+              условия предоставления услуг прачечной для Вашего бизнеса">
+
+              <div class="input-div">
+                <input type="text" class="input" name="name" placeholder="Ваше имя">
+              </div>
+
+              <div class="input-div">
+                <input type="tel" class="input" name="phone" placeholder="Введите телефон*" required="" minlength="10">
+                <span class="error-message">Заполните это поле</span>
+              </div>
+
+              <button class="button button--red ajax-submit" type="submit" id="obsudit_usloviya">Обсудить условия</button>
+            </div>
+            <div class="form__info">*Ваши данные в безопасности 
+              и не будут переданы третьим лицам</div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section s-garant">
+      <div class="container">
+        <h2 class="section-title">Гарантии для Вас</h2>
+        <div class="row justify-content-center">
+          <div class="col-md-4">
+            <div class="garant">
+              <div class="garant__img"><img src="./img/garant-icon.png" alt=""></div>
+              <div class="garant__title">КАЧЕСТВА</div>
+              <div class="garant__text">Мы работаем на совесть, поэтому не боимся ответственности</div>
+              <div class="garant__text">Недовольны тем, как постираны ваши вещи? <span>Вернём 100%</span> оплаченных денег!</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="garant">
+              <div class="garant__img"><img src="./img/garant-icon.png" alt=""></div>
+              <div class="garant__title">НАДЕЖНОСТИ</div>
+              <div class="garant__text">Пользуемся исключительно сертифицированными средствами</div>
+              <div class="garant__text">Аллергия? Индивидуальные требования
+                  к стирке? Только намекните – решим любой вопрос! </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="garant">
+              <div class="garant__img"><img src="./img/garant-icon.png" alt=""></div>
+              <div class="garant__title">СРОКОВ ИСПОЛНЕНИЯ</div>
+              <div class="garant__text">Все заказы выполняются в течении суток</div>
+              <div class="garant__text">Не получили заказ вовремя по нашей вине? Тогда мы не возьмём с вас денег!</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section s-advantage" id="advantage">
+      <div class="container">
+        <h2 class="section-title">Преимущества стирки в прачечной "ДезСнаб-Трейд"</h2>
+        <div class="s-advantage__content">
+          <div class="advantage__content">
+            <div class="advantage__img"><img src="./img/advantage-1.jpg" alt=""></div>
+            <div class="advantage__block">
+              <div class="advantage__title">Полный комплекс услуг: </div>
+              <div class="advantage__text">
+                  - качественная стирка; <br>
+                  - аккуратная сушка; <br>
+                  - безукоризненная глажка.    </div>
+            </div>
+          </div>
+          <div class="advantage__content">
+            <div class="advantage__block">
+              <div class="advantage__text advantage__text--right">Бесплатная доставка
+                  белья в обе стороны. Забираем
+                  грязное – возвращаем чистое
+                  и отглаженное.</div>
+            </div>
+            <div class="advantage__img"><img src="./img/advantage-2.jpg" alt=""></div>              
+          </div>
+          <div class="advantage__content">              
+            <div class="advantage__img"><img src="./img/advantage-3.jpg" alt=""></div>              
+            <div class="advantage__block">
+              <div class="advantage__text">Современное профессиональное
+                  оборудование. В наши стиральные машины
+                  поместятся даже крупноразмерные
+                  предметы.      </div>
+            </div>
+          </div>
+          <div class="advantage__content">
+            <div class="advantage__block">
+              <div class="advantage__text advantage__text--right">Только сертифицированные средства
+                  для стирки: отстирывают тщательно
+                  и безопасно.</div>
+            </div>
+            <div class="advantage__img"><img src="./img/advantage-4.jpg" alt=""></div>              
+          </div>
+          <div class="advantage__content">
+            <div class="advantage__img"><img src="./img/advantage-5.jpg" alt=""></div>            
+            <div class="advantage__block">
+              <div class="advantage__text">Наши работники – наша гордость. <br>
+                  Они отлично знают свою работу
+                  и по-настоящему любят её.    </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section s-company">
+      <div class="container">
+        <h2 class="section-title">О компании "ДезСнаб-Трейд"</h2>
+        <div class="row">
+          <div class="col-lg-6 wow FadeIn">
+            <div class="row">
+              <div class="col-6">
+                <div class="company__title">2006</div>
+                <div class="company__text">Компания основана в 2006 году  </div>
+              </div>
+              <div class="col-6">
+                <div class="company__title company__title--min">150 000</div>
+                <div class="company__text">Ежемесячно стираем более
+                    150 000 кг белья    </div>
+              </div>
+              <div class="col-6">
+                <div class="company__title">10 000</div>
+                <div class="company__text">Более 10 000 довольных
+                    клиентов!  </div>
+              </div>
+              <div class="col-6">
+                <div class="company__title">100</div>
+                <div class="company__text">В компании работает более <br>
+                    100 человек    </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="s-company__title">Нашими клиентами являются такие крупные компании, как</div>
+            <div class="s-company__content">
+              <div class="company__img"><img src="./img/kazaktzh.png" alt=""></div>
+              <div class="company__img"><img src="./img/kaznpu.png" alt=""></div>
+              <div class="company__img"><img src="./img/kazatk.png" alt=""></div>
+              <div class="company__img"><img src="./img/National.png" alt=""></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section s-pismo inverse">
+      <div class="container">
+        <h2 class="section-title">Благодарственные письма наших корпоравтиных клиентов</h2>
+        <div class="s-pismo__content">
+          <a href="./img/pismo-big-1.jpg" data-fancybox="pismoGallery" class="pismo">
+            <img src="./img/pismo-1.jpg" alt="">
+          </a>
+          <a href="./img/pismo-big-2.jpg" data-fancybox="pismoGallery" class="pismo">
+            <img src="./img/pismo-2.jpg" alt="">
+          </a>
+        </div>
+        <div class="s-pismo__title">Корпоративным клиентам – спеццены и спецпредложения!</div>
+        <div class="s-pismo__text"> Существенная экономия для владельцев гостиниц, ресторанов, организаций</div>
+        <div class="form form--horizontal inverse wow slideInUp">
+          <form action="/mail.php" method="post">
+            <div class="form__title">Оставьте заявку,чтобы обсудить индивидуальные <br>
+                условия предоставления услуг прачечной для Вашего бизнеса</div>
+            <div class="form__content">
+
+              <input type="hidden" name="info" value="Оставьте заявку,чтобы обсудить индивидуальные
+              условия предоставления услуг прачечной для Вашего бизнеса">
+
+              <div class="input-div">
+                <input type="text" class="input" name="name" placeholder="Ваше имя">
+              </div>
+
+              <div class="input-div">
+                <input type="tel" class="input" name="phone" placeholder="Введите телефон*" required="" minlength="10">
+                <span class="error-message">Заполните это поле</span>
+              </div>
+
+              <button class="button button--red ajax-submit" type="submit" id="obsudit_usloviya">Обсудить условия</button>
+            </div>
+            <div class="form__info">*Ваши данные в безопасности 
+              и не будут переданы третьим лицам</div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section s-lider">
+      <div class="container">
+        <div class="s-lider__content">
+          <div class="lider__block">
+            <div class="lider__title">Лидер года</div>
+            <div class="lider__text">2 года подряд мы лидируем в Национальном бизнес-рейтинге. <br>
+                2 года подряд нас признают лучшими из лучших. <br>
+                Мы – Лидеры. Мы достигли вершины. Но не намерены сдавать обороты!      </div>
+          </div>
+          <div class="s-lider__img">
+            <img src="./img/lider-1.png" alt="" class="lider__img lider__img--1">
+            <img src="./img/lider-2.png" alt="" class="lider__img lider__img--min lider__img--2">
+            <img src="./img/lider-3.png" alt="" class="lider__img lider__img--min lider__img--3">
+            <img src="./img/lider-4.png" alt="" class="lider__img lider__img--4">
+            <img src="./img/lider-5.png" alt="" class="lider__img lider__img--5">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="s-contact" id="contact">
+      <div class="map">
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab380ac8e9c8b6ab41a1c73bb3c4db2c6185716812df9d4b47b8de751b0021136&amp;width=100%25&amp;height=550&amp;lang=ru_RU&amp;scroll=true"></script>
+        <div class="contact inverse wow flipInX">
+          <div class="container">
+            <div class="contact__content">
+              <div class="contact__phone">
+                <a href="tel:+77077014200" class="text-phone" id="phone_number">+7 707 701-42-00</a>
+              </div>
+              <div class="contact__address">
+                г. Алматы, пр. Рыскулова, 68 «а»
+              </div>
+              <div class="contact__info">
+                <a href="#">info@dezsnab.kz</a>
+              </div>             
+            </div>   
+          </div>                   
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer inverse">
+      <div class="container">
+        <div class="footer__content">
+          <a href="/" class="logo">
+            <img src="./img/logo.png" alt="">
+          </a>
+
+          <div class="footer__block">
+            <a href="#" class="button" data-remodal-target="zvonok-modal"><img src="./img/phone.png" alt=""> Заказать звонок</a>
+            <div class="footer__politika" data-remodal-target="politika">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</div>
+          </div>
+
+          <div class="footer__comand">Создано командой
+            <a href="//evodreammarketing.com" target="_blank"><img src="./img/evodream.png" alt="EvodreamMarketing"></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <div class="remodal remodal--small" data-remodal-id="zvonok-modal" data-remodal-options="hashTracking: true">
+    <button data-remodal-action="close" class="remodal-close remodal-close--white"></button>
+
+    <div class="remodal__title inverse">Оставьте заявку,  <br>
+      и в течение 15 минут <br>
+      наш менеджер свяжется с Вами!</div>
+
+    <div class="form form--vertical inverse">
+      <form action="/mail.php" method="post">
+        <div class="form__content">
+          <input type="hidden" name="info" value="Обратный звонок">
+
+          <div class="input-div">
+            <input type="text" class="input" name="name" placeholder="Представьтесь">
+          </div>
+
+          <div class="input-div">
+            <input type="tel" class="input" name="phone" placeholder="Введите телефон*" required minlength="10">
+            <span class="error-message">Заполните это поле</span>
+          </div>
+
+          <button class="button button--red ajax-submit" type="submit" id="zakazat_zvonok">Заказать звонок</button>
+
+          <div class="form__info inverse">*Ваши данные в безопасности
+            и не будут переданы третьим лицам</div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="remodal politika" data-remodal-id="politika" data-remodal-options="hashTracking: true">
+    <button data-remodal-action="close" class="remodal-close"></button>
+
+    <div class="politika__title">Политика конфиденциальности</div>
+
+    <div class="politika__text">Соблюдение Вашей конфиденциальности важно для нашей компании. Поэтому мы разработали Политику Конфиденциальности, которая описывает, как используется и хранится Ваша информация. Пожалуйста, ознакомьтесь и сообщите нам, если у Вас возникнут какие-либо вопросы.</div>
+
+    <div class="politika__text"><span>Сбор и использование персональной информации</span> <br>
+    Под персональной информацией понимаются данные, которые могут быть использованы для идентификации определенного лица либо связи с ним. От Вас может быть запрошено предоставление персональной информации в любой момент, когда Вы связываетесь с нами.</div>
+
+    <div class="politika__text"><span>Какую персональную информацию мы собираем</span> <br>
+    Когда Вы оставляете заявку на сайте, мы можем собирать различную информацию, включая Ваше имя, номер телефона, адрес электронной почты и т.д.</div>
+
+    <div class="politika__text"><span>Как мы используем Вашу персональную информацию</span> <br>
+    Персональная информация позволяет нам сообщать об уникальных предложениях, акциях и других мероприятиях и ближайших событиях. Время от времени мы можем использовать Вашу персональную информацию для отправки важных уведомлений и сообщений. Мы также можем использовать персональную информацию для внутренних целей: проведения аудита, анализа данных и различных исследований в целях улучшения услуг. Если Вы принимаете участие в розыгрыше призов или конкурсе, мы можем использовать информацию для управления такими программами.</div>
+
+    <div class="politika__text"><span>Раскрытие информации третьим лицам</span> <br>
+    Мы не раскрываем полученную от Вас информацию третьим лицам.</div>
+
+    <div class="politika__text"><span>Исключения</span> <br>
+    В соответствии с законом, судебным порядком, в судебном разбирательстве и/или на основании публичных запросов или запросов от государственных органов на территории РК. Мы также можем раскрывать информацию о Вас, если мы определим, что такое раскрытие необходимо или уместно в целях безопасности, поддержания правопорядка или иных общественно важных случаях.
+    В случае реорганизации, слияния или продажи мы можем передать собираемую нами персональную информацию соответствующему третьему лицу – правопреемнику.</div>
+
+    <div class="politika__text"><span>Защита персональной информации</span> <br>
+    Мы предпринимаем меры предосторожности, включая административные, технические и физические для защиты Вашей персональной информации от утраты, кражи и недобросовестного использования, а также от несанкционированного доступа, раскрытия, изменения и уничтожения.</div>
+
+    <div class="politika__text"><span>Соблюдение Вашей конфиденциальности на уровне компании</span> <br>
+    Чтобы убедиться, что Ваша персональная информация находится в безопасности, мы доводим нормы соблюдения конфиденциальности и безопасности до наших сотрудников и строго следим за исполнением мер соблюдения конфиденциальности.  </div>
+    
+  </div>
+
+  <script src="./js/libs.min.js"></script>
+  <script src="./js/main.min.js"></script>
+</body>
+
+</html>
