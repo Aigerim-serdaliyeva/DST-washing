@@ -153,6 +153,7 @@
           <form action="/mail.php" method="post">
             <input type="hidden" name="info" value="Quiz">
             <div class="row">
+
               <div class="col-lg-4 col-md-6">
                 <div class="question calculate wow slideInUp">
                   <h3 class="calculate__title">Постельные принадлежности</h3>
@@ -160,68 +161,63 @@
                   <div class="question__variants calculate__quiz">
                     <label class="label">
                       <div class="checkbox checkbox--image">
-                        <input type="checkbox" name="Ответ1" value="Комплект постельного белья 1,5 сп.">
+                        <input type="checkbox" name="Ответ1[]" value="Комплект постельного белья 1,5 сп." checked>
                         <span></span>                        
                       </div>
                       <span>Комплект постельного белья 1,5 сп.</span>
                     </label>
                     <div class="question__number">
                       <div class="number__title">Количество</div>
-                      <input type="number" class="number" name="Ответ1" value="1">
-                    </div>
-                    
+                      <input type="number" class="number" name="Ответ1_count" value="1">
+                    </div>                    
                     <label class="label">
                       <div class="checkbox checkbox--image">
-                        <input type="checkbox" name="Ответ1" value="Комплект постельного белья  2 сп.">
+                        <input type="checkbox" name="Ответ1[]" value="Комплект постельного белья  2 сп.">
                         <span></span>
                       </div>
                       <span>Комплект постельного белья  2 сп.</span>
-                    </label>
-    
+                    </label>    
                     <label class="label">
                       <div class="checkbox checkbox--image">
-                        <input type="checkbox" name="Ответ1" value="Подушка">
+                        <input type="checkbox" name="Ответ1[]" value="Подушка">
                         <span></span>
                       </div>
                       <span>Подушка</span>
-                    </label>
-    
+                    </label>    
                     <label class="label">
                       <div class="checkbox checkbox--image">
-                        <input type="checkbox" name="Ответ1" value="Одеяло 1,5 сп.">
+                        <input type="checkbox" name="Ответ1[]" value="Одеяло 1,5 сп.">
                         <span></span>
                       </div>
                       <span>Одеяло 1,5 сп.</span>
-                    </label>
-    
+                    </label>    
                     <label class="label">
                       <div class="checkbox checkbox--image">
-                        <input type="checkbox" name="Ответ1" value="Одеяло 2 сп.">
+                        <input type="checkbox" name="Ответ1[]" value="Одеяло 2 сп.">
                         <span></span>
                       </div>
                       <span>Одеяло 2 сп.</span>
-                    </label>
-    
+                    </label>    
                     <label class="label">
                       <div class="checkbox checkbox--image">
-                        <input type="checkbox" name="Ответ1" value="Покрывало, плед">
+                        <input type="checkbox" name="Ответ1[]" value="Покрывало, плед">
                         <span></span>
                       </div>
                       <span>Покрывало, плед</span>
-                    </label>
-                    
+                    </label>                    
                     <label class="label">
                       <span class="checkbox checkbox--image">
-                        <input type="radio" name="Ответ1" value="Другое" class="drugoe">
+                        <input type="radio" name="Ответ1[]" value="Другое" class="drugoe">
                         <span></span>
                       </span>
                       <span>Другое</span>
-                      <input type="text" name="Ответ1_текст" placeholder="введите текст*" class="ukazat">
+                      <input type="text" name="Ответ1[]" placeholder="введите текст*" class="ukazat">
                     </label>
                   </div>
                   <div class="question__error"></div>
                 </div>
-              </div>            
+              </div>  
+
               <div class="col-lg-4 col-md-6">
                 <div class="question calculate wow slideInUp">
                   <h3 class="calculate__title">Шторы, тюль</h3>
@@ -229,40 +225,38 @@
                   <div class="question__variants calculate__quiz">
                     <label class="label">
                       <div class="checkbox checkbox--image">
-                        <input type="checkbox" name="Ответ2" value="Тюль">
+                        <input type="checkbox" name="Ответ2[]" value="Тюль">
                         <span></span>
                       </div>
                       <span>Тюль</span>
-                    </label>
-                    
+                    </label>                    
                     <label class="label">
                       <div class="checkbox checkbox--image">
-                        <input type="checkbox" name="Ответ2" value="Шторы простые, тонкие">
+                        <input type="checkbox" name="Ответ2[]" value="Шторы простые, тонкие">
                         <span></span>
                       </div>
                       <span>Шторы простые, тонкие</span>
-                    </label>
-    
+                    </label>    
                     <label class="label">
                       <div class="checkbox checkbox--image">
-                        <input type="checkbox" name="Ответ2" value="Шторы сложные, на подкладе">
+                        <input type="checkbox" name="Ответ2[]" value="Шторы сложные, на подкладе">
                         <span></span>
                       </div>
                       <span>Шторы сложные, на подкладе</span>
-                    </label>    
-                    
+                    </label>  
                     <label class="label">
                       <span class="checkbox checkbox--image">
-                        <input type="radio" name="Ответ2" value="Другое" class="drugoe">
+                        <input type="radio" name="Ответ2[]" value="Другое" class="drugoe">
                         <span></span>
                       </span>
                       <span>Другое</span>
-                      <input type="text" name="Ответ1_текст" placeholder="введите текст*" class="ukazat">
+                      <input type="text" name="Ответ2[]" placeholder="введите текст*" class="ukazat">
                     </label>
                   </div>
                   <div class="question__error"></div>
                 </div>
               </div>
+
               <div class="col-lg-4 col-md-6">
                 <div class="question calculate wow slideInUp">
                   <h3 class="calculate__title">Спец  одежда</h3>
@@ -270,7 +264,7 @@
                   <div class="question__variants calculate__quiz">
                     <label class="label">
                       <div class="checkbox checkbox--image">
-                        <input type="checkbox" name="Ответ3" value="Рабочая спецовка">
+                        <input type="checkbox" name="Ответ3[]" value="Рабочая спецовка">
                         <span></span>
                       </div>
                       <span>Рабочая спецовка</span>
@@ -278,7 +272,7 @@
                     
                     <label class="label">
                       <div class="checkbox checkbox--image">
-                        <input type="checkbox" name="Ответ3" value="Рабочая спецовка зимняя">
+                        <input type="checkbox" name="Ответ3[]" value="Рабочая спецовка зимняя">
                         <span></span>
                       </div>
                       <span>Рабочая спецовка зимняя</span>
@@ -286,7 +280,7 @@
     
                     <label class="label">
                       <div class="checkbox checkbox--image">
-                        <input type="checkbox" name="Ответ3" value="Форма обслуживающего персонала">
+                        <input type="checkbox" name="Ответ3[]" value="Форма обслуживающего персонала">
                         <span></span>
                       </div>
                       <span>Форма обслуживающего персонала</span>
@@ -294,11 +288,11 @@
                     
                     <label class="label">
                       <span class="checkbox checkbox--image">
-                        <input type="radio" name="Ответ3" value="Другое" class="drugoe">
+                        <input type="radio" name="Ответ3[]" value="Другое" class="drugoe">
                         <span></span>
                       </span>
                       <span>Другое</span>
-                      <input type="text" name="Ответ1_текст" placeholder="введите текст*" class="ukazat">
+                      <input type="text" name="Ответ3_текст" placeholder="введите текст*" class="ukazat">
                     </label>
                   </div>
                   <div class="question__error"></div>
