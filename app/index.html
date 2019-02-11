@@ -148,11 +148,13 @@
     <section class="section s-calculate" id="calculate" >
       <div class="container">
         <h2 class="section-title">Рассчитайте стоимость стирки вашего белья</h2>
-        <div class="s-calculate__title">Выберите изделие, укажите его количество и размер</div>
-        <div class="s-calculate__text">(Можно указать 1 и более вариантов)</div>
           <form action="/mail.php" method="post">
             <input type="hidden" name="info" value="Quiz">
             <div class="row">
+              <div class="col-lg-12">
+                <div class="s-calculate__title">Выберите изделие, укажите его количество и размер</div>
+                <div class="s-calculate__text">(Можно указать 1 и более вариантов)</div>
+              </div>
 
               <div class="col-lg-4 col-md-6">
                 <div class="question calculate wow slideInUp">
@@ -161,57 +163,77 @@
                   <div class="question__variants calculate__quiz">
                     <label class="label">
                       <div class="checkbox checkbox--image">
-                        <input type="checkbox" name="Ответ1[]" value="Комплект постельного белья 1,5 сп.">
+                        <input type="checkbox" name="Ответ1_1" value="Комплект постельного белья 1,5 сп.">
                         <span></span>                        
                       </div>
                       <span>Комплект постельного белья 1,5 сп.</span>
                     </label>
                     <div class="question__number">
                       <div class="number__title">Количество</div>
-                      <input type="number" class="number" name="Ответ1_count" value="1">
+                      <input type="number" class="number" name="Ответ1_1_количество" value="0" disabled>
                     </div>                    
                     <label class="label">
                       <div class="checkbox checkbox--image">
-                        <input type="checkbox" name="Ответ1[]" value="Комплект постельного белья  2 сп.">
+                        <input type="checkbox" name="Ответ1_2" value="Комплект постельного белья  2 сп.">
                         <span></span>
                       </div>
                       <span>Комплект постельного белья  2 сп.</span>
-                    </label>    
+                    </label> 
+                    <div class="question__number">
+                      <div class="number__title">Количество</div>
+                      <input type="number" class="number" name="Ответ1_2_количество" value="0" disabled>
+                    </div>   
                     <label class="label">
                       <div class="checkbox checkbox--image">
-                        <input type="checkbox" name="Ответ1[]" value="Подушка">
+                        <input type="checkbox" name="Ответ1_3" value="Подушка">
                         <span></span>
                       </div>
                       <span>Подушка</span>
-                    </label>    
+                    </label> 
+                    <div class="question__number">
+                      <div class="number__title">Количество</div>
+                      <input type="number" class="number" name="Ответ1_3_количество" value="0" disabled>
+                    </div>   
                     <label class="label">
                       <div class="checkbox checkbox--image">
-                        <input type="checkbox" name="Ответ1[]" value="Одеяло 1,5 сп.">
+                        <input type="checkbox" name="Ответ1_4" value="Одеяло 1,5 сп.">
                         <span></span>
                       </div>
                       <span>Одеяло 1,5 сп.</span>
-                    </label>    
+                    </label>
+                    <div class="question__number">
+                      <div class="number__title">Количество</div>
+                      <input type="number" class="number" name="Ответ1_4_количество" value="0" disabled>
+                    </div>    
                     <label class="label">
                       <div class="checkbox checkbox--image">
-                        <input type="checkbox" name="Ответ1[]" value="Одеяло 2 сп.">
+                        <input type="checkbox" name="Ответ1_5" value="Одеяло 2 сп.">
                         <span></span>
                       </div>
                       <span>Одеяло 2 сп.</span>
-                    </label>    
+                    </label>  
+                    <div class="question__number">
+                      <div class="number__title">Количество</div>
+                      <input type="number" class="number" name="Ответ1_5_количество" value="0" disabled>
+                    </div>  
                     <label class="label">
                       <div class="checkbox checkbox--image">
-                        <input type="checkbox" name="Ответ1[]" value="Покрывало, плед">
+                        <input type="checkbox" name="Ответ1_6" value="Покрывало, плед">
                         <span></span>
                       </div>
                       <span>Покрывало, плед</span>
-                    </label>                    
+                    </label>    
+                    <div class="question__number">
+                      <div class="number__title">Количество</div>
+                      <input type="number" class="number" name="Ответ1_6_количество" value="0" disabled>
+                    </div>                
                     <label class="label">
                       <span class="checkbox checkbox--image">
-                        <input type="radio" name="Ответ1[]" value="Другое" class="drugoe">
+                        <input type="radio" name="Ответ1_7" value="Другое" class="drugoe">
                         <span></span>
                       </span>
                       <span>Другое</span>
-                      <input type="text" name="Ответ1[]" placeholder="введите текст*" class="ukazat">
+                      <input type="text" name="Ответ1_7_текст" placeholder="введите текст*" class="ukazat">
                     </label>
                   </div>
                   <div class="question__error"></div>
@@ -300,7 +322,7 @@
               </div>
             </div>  
             
-            <button class="button more">Далее</button>
+            <button class="button more" >Далее</button>
 
             <div class="form form--vertical d-none">
               <div class="form__title">Введите контактные данные для обратной связи</div>
@@ -467,13 +489,19 @@
             </div>
           </div>
           <div class="advantage__content">
-            <div class="advantage__block">
+            <div class="advantage__block d-none d-sm-block">
               <div class="advantage__text advantage__text--right">Бесплатная доставка
                   белья в обе стороны. Забираем
                   грязное – возвращаем чистое
                   и отглаженное.</div>
             </div>
-            <div class="advantage__img"><img src="./img/advantage-2.jpg" alt=""></div>              
+            <div class="advantage__img"><img src="./img/advantage-2.jpg" alt=""></div>
+            <div class="advantage__block advantage__block__none">
+              <div class="advantage__text">Бесплатная доставка
+                  белья в обе стороны. Забираем
+                  грязное – возвращаем чистое
+                  и отглаженное.</div>
+            </div>              
           </div>
           <div class="advantage__content">              
             <div class="advantage__img"><img src="./img/advantage-3.jpg" alt=""></div>              
@@ -485,12 +513,17 @@
             </div>
           </div>
           <div class="advantage__content">
-            <div class="advantage__block">
+            <div class="advantage__block d-none d-sm-block">
               <div class="advantage__text advantage__text--right">Только сертифицированные средства
                   для стирки: отстирывают тщательно
                   и безопасно.</div>
             </div>
-            <div class="advantage__img"><img src="./img/advantage-4.jpg" alt=""></div>              
+            <div class="advantage__img"><img src="./img/advantage-4.jpg" alt=""></div> 
+            <div class="advantage__block advantage__block__none">
+              <div class="advantage__text">Только сертифицированные средства
+                  для стирки: отстирывают тщательно
+                  и безопасно.</div>
+            </div>             
           </div>
           <div class="advantage__content">
             <div class="advantage__img"><img src="./img/advantage-5.jpg" alt=""></div>            
@@ -516,7 +549,7 @@
               </div>
               <div class="col-6">
                 <div class="company__title company__title--min">150 000</div>
-                <div class="company__text">Ежемесячно стираем более
+                <div class="company__text">Ежемесячно стираем более <br>
                     150 000 кг белья    </div>
               </div>
               <div class="col-6">

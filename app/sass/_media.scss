@@ -84,6 +84,7 @@
     &-main {
       padding-top: 110px;
       .main {
+        background-image: url("../img/main-back2.jpg");
         margin-bottom: 30px;
         &__block {
           &--1 {
@@ -214,6 +215,7 @@
     &-main {
       padding-top: 95px;
       .main {
+        background-color: rgba(#524d4d, .5);
         &__title {
           font-size: 30px;
           margin-bottom: 150px;
@@ -255,6 +257,9 @@
         &__title {
           font-size: 17px;
           margin-bottom: 10px;
+        }
+        &__block {
+          display: flex;
         }
       }
     }
@@ -381,6 +386,9 @@
         &__block {
           width: 100%;
           background-color: #f3f7f4;
+          &__none {
+            display: block;
+          }
         }
       }
     }

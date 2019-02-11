@@ -228,8 +228,18 @@ $(document).ready(function () {
   });
 
   $(".more").click( function() {
-    $(this).siblings(".form").removeClass("d-none");
+    $(this).next(".form").removeClass("d-none");
+    $(this).prev(".row").addClass("d-none");
     $(this).addClass('d-none');
+  });
+
+  $(".label input[type=checkbox]").change(function(e) {
+    // console.log(e.target.checked);
+    if (e.target.checked) {
+      $(this).closest(".label").addClass('checked').next('.question__number').find('input[type=number]').val(1).prop('disabled', false);
+    } else {
+      $(this).closest(".label").removeClass('checked').next('.question__number').find('input[type=number]').val(0).prop('disabled', true);
+    }
   });
 
   $(".carousel-certificates").owlCarousel({

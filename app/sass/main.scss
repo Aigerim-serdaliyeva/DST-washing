@@ -296,7 +296,7 @@
 
   .question {
     &__number {
-      display: flex;
+      display: none;
       align-items: center;
       margin-left: 25px;
       margin-bottom: 10px;
@@ -310,6 +310,14 @@
       text-align: center;
       &__title {
         font-size: 12px;
+      }
+    }
+  }
+
+  .label {
+    &.checked {
+      & + .question__number {
+        display: flex;
       }
     }
   }
@@ -450,6 +458,9 @@
     &__block {
       padding: 50px 28px;
       width: 50%;
+      &__none {
+        display: none;
+      }
     }
 
     &__title {
