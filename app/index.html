@@ -248,32 +248,44 @@
                   <div class="question__variants calculate__quiz">
                     <label class="label">
                       <div class="checkbox checkbox--image">
-                        <input type="checkbox" name="Ответ2[]" value="Тюль">
+                        <input type="checkbox" name="Ответ2_1" value="Тюль">
                         <span></span>
                       </div>
                       <span>Тюль</span>
-                    </label>                    
+                    </label>    
+                    <div class="question__number">
+                      <div class="number__title">Количество</div>
+                      <input type="number" class="number" name="Ответ2_1_количество" value="0" disabled>
+                    </div>                 
                     <label class="label">
                       <div class="checkbox checkbox--image">
-                        <input type="checkbox" name="Ответ2[]" value="Шторы простые, тонкие">
+                        <input type="checkbox" name="Ответ2_2" value="Шторы простые, тонкие">
                         <span></span>
                       </div>
                       <span>Шторы простые, тонкие</span>
-                    </label>    
+                    </label>  
+                    <div class="question__number">
+                      <div class="number__title">Количество</div>
+                      <input type="number" class="number" name="Ответ2_2_количество" value="0" disabled>
+                    </div>   
                     <label class="label">
                       <div class="checkbox checkbox--image">
-                        <input type="checkbox" name="Ответ2[]" value="Шторы сложные, на подкладе">
+                        <input type="checkbox" name="Ответ2_3" value="Шторы сложные, на подкладе">
                         <span></span>
                       </div>
                       <span>Шторы сложные, на подкладе</span>
-                    </label>  
+                    </label> 
+                    <div class="question__number">
+                      <div class="number__title">Количество</div>
+                      <input type="number" class="number" name="Ответ2_3_количество" value="0" disabled>
+                    </div>  
                     <label class="label">
                       <span class="checkbox checkbox--image">
-                        <input type="checkbox" name="Ответ2[]" value="Другое" class="drugoe">
+                        <input type="checkbox" name="Ответ2_текст" value="Другое" class="drugoe">
                         <span></span>
                       </span>
                       <span>Другое</span>
-                      <input type="text" name="Ответ2[]" placeholder="введите текст*" class="ukazat">
+                      <input type="text" name="Ответ2_текст" placeholder="введите текст*" class="ukazat">
                     </label>
                   </div>
                   <div class="question__error"></div>
@@ -287,31 +299,43 @@
                   <div class="question__variants calculate__quiz">
                     <label class="label">
                       <div class="checkbox checkbox--image">
-                        <input type="checkbox" name="Ответ3[]" value="Рабочая спецовка">
+                        <input type="checkbox" name="Ответ3_1" value="Рабочая спецовка">
                         <span></span>
                       </div>
                       <span>Рабочая спецовка</span>
                     </label>
+                    <div class="question__number">
+                      <div class="number__title">Количество</div>
+                      <input type="number" class="number" name="Ответ3_1_количество" value="0" disabled>
+                    </div> 
                     
                     <label class="label">
                       <div class="checkbox checkbox--image">
-                        <input type="checkbox" name="Ответ3[]" value="Рабочая спецовка зимняя">
+                        <input type="checkbox" name="Ответ3_2" value="Рабочая спецовка зимняя">
                         <span></span>
                       </div>
                       <span>Рабочая спецовка зимняя</span>
                     </label>
+                    <div class="question__number">
+                      <div class="number__title">Количество</div>
+                      <input type="number" class="number" name="Ответ3_2_количество" value="0" disabled>
+                    </div> 
     
                     <label class="label">
                       <div class="checkbox checkbox--image">
-                        <input type="checkbox" name="Ответ3[]" value="Форма обслуживающего персонала">
+                        <input type="checkbox" name="Ответ3_3" value="Форма обслуживающего персонала">
                         <span></span>
                       </div>
                       <span>Форма обслуживающего персонала</span>
                     </label>    
+                    <div class="question__number">
+                      <div class="number__title">Количество</div>
+                      <input type="number" class="number" name="Ответ3_3_количество" value="0" disabled>
+                    </div> 
                     
                     <label class="label">
                       <span class="checkbox checkbox--image">
-                        <input type="checkbox" name="Ответ3[]" value="Другое" class="drugoe">
+                        <input type="checkbox" name="Ответ3_текст" value="Другое" class="drugoe">
                         <span></span>
                       </span>
                       <span>Другое</span>
@@ -359,7 +383,7 @@
               <div class="service__block">
                 <div class="service__title">Постельные <br>
                     принадлежности</div>
-                <button class="button button--red">Оставить заявку</button>
+                <button class="button button--red" data-remodal-target="ostavit-zayavku" data-remodal-info='{"info":[{"prop":"Стираем, сушим, гладим, чистим","value":"Постельные принадлежности"}]}'>Оставить заявку</button>
               </div>
             </div>
           </div>
@@ -368,7 +392,7 @@
               <div class="service__img"><img src="./img/service-2.jpg" alt=""></div>
               <div class="service__block">
                 <div class="service__title">Шторы, тюли</div>
-                <button class="button button--red">Оставить заявку</button>
+                <button class="button button--red" data-remodal-target="ostavit-zayavku" data-remodal-info='{"info":[{"prop":"Стираем, сушим, гладим, чистим","value":"Шторы, тюли"}]}'>Оставить заявку</button>
               </div>
             </div>
           </div>
@@ -376,8 +400,8 @@
             <div class="service inverse">
               <div class="service__img"><img src="./img/service-3.jpg" alt=""></div>
               <div class="service__block">
-                <div class="service__title">Шторы, тюли</div>
-                <button class="button button--red">Оставить заявку</button>
+                <div class="service__title">Спецодежду</div>
+                <button class="button button--red" data-remodal-target="ostavit-zayavku" data-remodal-info='{"info":[{"prop":"Стираем, сушим, гладим, чистим","value":"Спецодежду"}]}'>Оставить заявку</button>
               </div>
             </div>
           </div>
@@ -387,7 +411,7 @@
               <div class="service__block">
                 <div class="service__title">Покрывалы, пледы, <br>
                     корпешки</div>
-                <button class="button button--red">Оставить заявку</button>
+                <button class="button button--red" data-remodal-target="ostavit-zayavku" data-remodal-info='{"info":[{"prop":"Стираем, сушим, гладим, чистим","value":"Покрывалы, пледы, корпешки"}]}'>Оставить заявку</button>
               </div>
             </div>
           </div>
@@ -397,7 +421,7 @@
               <div class="service__block">
                 <div class="service__title">Ковровые <br>
                     покрытии</div>
-                <button class="button button--red">Оставить заявку</button>
+                <button class="button button--red" data-remodal-target="ostavit-zayavku" data-remodal-info='{"info":[{"prop":"Стираем, сушим, гладим, чистим","value":"Ковровые покрытии"}]}'>Оставить заявку</button>
               </div>
             </div>
           </div>
@@ -407,7 +431,7 @@
               <div class="service__block">
                 <div class="service__title">Все, что не влезает <br>
                     в обычную стиральную машину</div>
-                <button class="button button--red">Оставить заявку</button>
+                <button class="button button--red" data-remodal-target="ostavit-zayavku" data-remodal-info='{"info":[{"prop":"Стираем, сушим, гладим, чистим","value":"Все, что не влезает в обычную стиральную машину"}]}'>Оставить заявку</button>
               </div>
             </div>
           </div>
@@ -738,6 +762,37 @@
     <div class="politika__text"><span>Соблюдение Вашей конфиденциальности на уровне компании</span> <br>
     Чтобы убедиться, что Ваша персональная информация находится в безопасности, мы доводим нормы соблюдения конфиденциальности и безопасности до наших сотрудников и строго следим за исполнением мер соблюдения конфиденциальности.  </div>
     
+  </div>
+
+  <div class="remodal remodal--small" data-remodal-id="ostavit-zayavku" data-remodal-options="hashTracking: true">
+    <button data-remodal-action="close" class="remodal-close remodal-close--white"></button>
+
+    <div class="remodal__title inverse">Оставьте заявку, <br>
+      и в течение 15 минут <br>
+      наш менеджер свяжется с Вами!</div>
+
+    <div class="form form--vertical inverse">
+      <form action="/mail.php" method="post">
+        <div class="form__content">
+          <input type="hidden" name="info" value="Стираем, сушим, гладим, чистим">
+          <input type="hidden" name="Стираем, сушим, гладим, чистим" value="">
+          
+          <div class="input-div">
+            <input type="text" class="input" name="name" placeholder="Представьтесь">
+          </div>
+
+          <div class="input-div">
+            <input type="tel" class="input" name="phone" placeholder="Введите телефон*" required minlength="10">
+            <span class="error-message">Заполните это поле</span>
+          </div>
+
+          <button class="button button--red ajax-submit" type="submit" id="ostavit_zayavku">Оставить заявку</button>
+
+          <div class="form__info inverse">*Ваши данные в безопасности
+            и не будут переданы третьим лицам</div>
+        </div>
+      </form>
+    </div>
   </div>
 
   <script src="./js/libs.min.js"></script>
