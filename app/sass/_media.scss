@@ -250,10 +250,16 @@
 
     &-service {
       padding: 40px 0 35px;
+      .carousel-service {
+        display: block;
+      }
       .service {
         max-width: 360px;
         width: 100%;
         margin: 0 auto 25px;
+        &--none {
+          display: none;
+        }
         &__title {
           font-size: 17px;
           margin-bottom: 10px;
